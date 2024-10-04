@@ -34,7 +34,29 @@ namespace WeddeBerekenen
             if (isHourlyWage && isNumberOfHours)
             {
                 double grossAnnualSalary = Math.Round(hourlyWage * numberOfHours * 0.7, 2);
-                double vat = Math.Round(grossAnnualSalary * 0.3, 2);
+                double vat;
+                ;
+                if (grossAnnualSalary > 50000)
+                {
+                    vat = Math.Round(grossAnnualSalary * 0.5, 2);
+                }
+                else if(grossAnnualSalary > 25000)
+                {
+                    vat = Math.Round(grossAnnualSalary * 0.4, 2);
+                }
+                else if (grossAnnualSalary > 15000)
+                {
+                    vat = Math.Round(grossAnnualSalary * 0.3, 2);
+                }
+                else if(grossAnnualSalary > 10000)
+                {
+                    vat = Math.Round(grossAnnualSalary * 0.2, 2);
+                }
+                else
+                {
+                    vat = 0;
+                }
+
                 double netAnnualSalary = Math.Round(grossAnnualSalary - vat, 2);
 
                 employeeName = employeeTextBox.Text;
