@@ -43,22 +43,25 @@ namespace WeddeBerekenen
                     {
                         vat += Math.Round((changedGrossAnnualSalary - 50000) * 0.5, 2);
                         changedGrossAnnualSalary = changedGrossAnnualSalary - (changedGrossAnnualSalary - 50000);
-                    }
+                }
                     else if (changedGrossAnnualSalary > 25000)
-                    {
+                {
                         vat += Math.Round((changedGrossAnnualSalary - 25000) * 0.4, 2);
                         changedGrossAnnualSalary = changedGrossAnnualSalary - (changedGrossAnnualSalary - 25000);
-                    }
+                }
                     else if (changedGrossAnnualSalary > 15000)
-                    {
+                {
                         vat += Math.Round((changedGrossAnnualSalary - 15000) * 0.3, 2);
                         changedGrossAnnualSalary = changedGrossAnnualSalary - (changedGrossAnnualSalary - 15000);
-                    }
+                }
                     else if (changedGrossAnnualSalary > 10000)
-                    {
+                {
                         vat += Math.Round((changedGrossAnnualSalary - 10000) * 0.2, 2);
                         changedGrossAnnualSalary = changedGrossAnnualSalary - (changedGrossAnnualSalary - 10000);
-                    }
+                }
+                else
+                {
+                    vat = 0;
                 }
 
 
